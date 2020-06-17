@@ -1,5 +1,5 @@
-const App = require('./app')
+import App from './app'
 
-App.listen(3001);
+App.listen(3001)
 
-console.log(`Server is ready on port ${3001}`);
+console.log(`Server is ready on port ${3001}`)

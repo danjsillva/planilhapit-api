@@ -1,13 +1,14 @@
-const Serverless = require('serverless-http');
-const Koa = require('koa');
-const Cors = require('koa-cors');
+import Serverless from 'serverless-http'
+import Koa from 'koa'
+import Cors from 'koa-cors'
 
-const Router = require('./router')
+import Router from './router'
 
 const App = new Koa();
 
 App.use(Cors());
 App.use(Router);
 
-module.exports = App
+export default App
+
 module.exports.handler = Serverless(App);

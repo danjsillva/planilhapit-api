@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 const show = async (ctx) => {
     const { label } = ctx.params
@@ -12,4 +12,4 @@ const show = async (ctx) => {
     }
 }
 
-module.exports = { show }
+export default { show }

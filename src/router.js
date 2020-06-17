@@ -1,6 +1,6 @@
-const Router = require('koa-router');
+import Router from 'koa-router'
 
-const AssetController = require('./controllers/AssetController')
+import AssetController from './controllers/AssetController'
 
 const router = new Router();
 
@@ -8,4 +8,4 @@ router.get('/', ctx => ctx.body = "Hello World")
 
 router.get('/assets/:label', AssetController.show)
 
-module.exports = router.routes()
+export default router.routes()
